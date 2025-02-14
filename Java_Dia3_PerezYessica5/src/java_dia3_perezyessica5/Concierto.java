@@ -20,6 +20,29 @@ public class Concierto {
         this.lugar = "Estadio Nemesio Camacho El Campín";
         this.precioBase = 50000;
     }
+    public int getId(){
+        return id;
+    }
+    
+    public String getNombre(){
+        return nombre;
+    }
+    
+    public String getArtista(){
+        return artista;
+    }
+    
+    public String getFecha(){
+        return fecha;
+    }
+    
+    public String getLugar(){
+        return lugar;
+    }
+    
+    public int getPrecio(){
+        return precioBase;
+    }
 
     @Override
     public String toString() {

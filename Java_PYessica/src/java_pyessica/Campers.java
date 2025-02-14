@@ -39,7 +39,8 @@ public class Campers {
         this.grupo = "t3";
     }
 
-    public Campers(int id, String fecha, String usuario, String contraseña, String nombre, String apellido, String direccion, String acudiente, int numero_celular, int numero_fijo, String estado, String riesgo, String grupo) {
+    public Campers(int id, String fecha, String usuario, String contraseña, String nombre, 
+            String apellido, String direccion, String acudiente, int numero_celular, int numero_fijo, String estado, String riesgo, String grupo) {
         this.id = id;
         this.fecha = fecha;
         this.usuario = usuario;
@@ -69,16 +70,16 @@ public class Campers {
     public String getcon(){
         return contraseña;
     }
-    public String getnom(String nombre){
+    public String getnom(){
         return nombre;
     }
-    public String getape(String apellido){
+    public String getape(){
         return apellido;
     }
-    public String getdi(String direccion){
+    public String getdi(){
         return direccion;
     }
-    public String getacu(String acudiente){
+    public String getacu(){
         return acudiente;
     }
     public int getnum1(){

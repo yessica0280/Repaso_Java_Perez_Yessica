@@ -1,13 +1,26 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package java_dia3_perezyessica5;
+import java.sql.*;
 
 /**
  *
  * @author Uniminuto Tibu
  */
 public class DB_Conexion {
+    String url = "jdbc:mysql://localhost:3306/Vibrantes";
+    String user = "root";
+    String pass = "campus2023";
     
+    // Método para conectar
+    public Connection conectar(){
+        Connection con = null;
+        try {
+            // Establecemos la conexión a la base de datos
+            con = DriverManager.getConnection(url, user, pass);
+            System.out.println("Conexión exitosa.");
+        } catch(SQLException e) {
+            e.printStackTrace();
+        }
+        return con;
+    }
 }
+

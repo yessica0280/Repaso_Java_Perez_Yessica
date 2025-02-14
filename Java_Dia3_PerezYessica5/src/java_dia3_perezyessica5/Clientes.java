@@ -9,14 +9,34 @@ public class Clientes {
     String nombre;
     String apellido;
     String correo;
-    int telefono;
+    long telefono;
     
-    public Clientes(int id, String nombre, String apellido, String correo, int telefono){
+    public Clientes(int id, String nombre, String apellido, String correo, long telefono){
         this.id = 1;
         this.nombre = "Yessica";
         this.apellido = "Perez";
         this.correo = "perez@gmail.com";
         this.telefono = 257525614;
+    }
+    
+    public int getId() {
+        return id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public long getTelefono() {
+        return telefono;
     }
 
     @Override
