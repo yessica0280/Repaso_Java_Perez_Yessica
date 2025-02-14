@@ -1,0 +1,2 @@
+polimorfismo.miClase
+polimorfismo.accesoIndirecto
