@@ -1,0 +1,10 @@
+Patronesdediseños.Abstract.abstract1$MacFactory
+Patronesdediseños.Abstract.abstract1$VentanaWindows
+Patronesdediseños.Abstract.Ventana
+Patronesdediseños.Abstract.GUIFactory
+Patronesdediseños.Abstract.abstract1$VentanaMac
+Patronesdediseños.Abstract.abstract1$BotonMac
+Patronesdediseños.Abstract.abstract1
+Patronesdediseños.Abstract.abstract1$BotonWindows
+Patronesdediseños.Abstract.Boton
+Patronesdediseños.Abstract.abstract1$WindowsFactory
