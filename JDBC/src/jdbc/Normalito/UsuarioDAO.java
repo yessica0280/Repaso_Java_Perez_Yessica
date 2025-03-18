@@ -61,7 +61,7 @@ public class UsuarioDAO {
     
     // Actualizar.
     public void actualizarUsuario(int id, String nombre, String email) {
-        String sql = "update usuarios set nombre=?, email=?, id=?";
+        String sql = "update usuarios set nombre=?, email=? where id=?";
         try (   Connection conexionInterna = conectar();
                 PreparedStatement solicitud = conexionInterna.prepareStatement(sql)) {
             solicitud.setString(1, nombre);
@@ -73,6 +73,40 @@ public class UsuarioDAO {
             }
             else {
                 System.out.println("No se pudo actualizar el usuario con ID" + id);
+            }
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void EliminarUsuario(int id) {
+        String sql = "delete from usuarios where id = ?";
+        try (   Connection conexionInterna = conectar();
+                PreparedStatement solicitud = conexionInterna.prepareStatement(sql)){
+            solicitud.setInt(1, id);
+            int filas = solicitud.executeUpdate();
+            if (filas > 0) {
+                System.out.println(" Uusario con el id eliminado es: " + id);
+            }
+            else {
+                System.out.println("No se pudo encontrar el usuario.");
+            }
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+    
+    public void buscarUsuarios(){
+        String sql = "select id from usuarios order by id asc";
+        try (   Connection conexionInterna = conectar();
+                PreparedStatement solicitud = conexionInterna.prepareStatement(sql);
+                ResultSet resultado = solicitud.executeQuery()
+                ){
+            while (resultado.next()) {
+                int id = resultado.getInt("id");
+                System.out.println("id: " + id);
             }
         }
         catch (SQLException e) {
